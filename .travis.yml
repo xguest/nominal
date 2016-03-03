@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "0.12"
+
+after_success:
+  - ./node_modules/.bin/jscoverage nominal.js nominal-cov.js
+  - NPM_COV=1 ./node_modules/.bin/mocha test -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js

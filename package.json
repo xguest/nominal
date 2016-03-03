@@ -1,0 +1,38 @@
+{
+ "name": "nominal",
+ "version": "2.0.6",
+ "description": "Series preferred values for resistors and capacitors",
+ "homepage": "https://github.com/xguest/nominal/",
+ "main": "nominal.js",
+ "author": {
+  "name": "xguest",
+  "email": "xguest@list.ru"
+ },
+ "keywords": ["javascript", "gost", "electronics", "nominal", "resistors", "capacitors", "inductance", "numbers"],
+ "bugs": {
+  "url": "https://github.com/xguest/nominal/issues"
+ },
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/xguest/nominal.git"
+ },
+ "devDependencies": {
+  "graceful-fs": "^4.0.0",
+  "coveralls": "^2.11.2",
+  "jscoverage": "^0.5.6",
+  "mocha": "^1.21.4",
+  "mocha-lcov-reporter": "0.0.1",
+  "serve": "^1.4.0",
+  "should": "^4.0.4",
+  "umd": "^2.1.0"
+ },
+ "license": {
+  "type": "GPL-3.0",
+  "url": "http://www.gnu.org/licenses/"
+ },
+ "readmeFilename": "README.md",
+ "scripts": {
+  "test": "mocha --reporter spec --bail test/*.js",
+  "test-cov": "jscoverage nominal.js nominal-cov.js  &&set NPM_COV=1 &&mocha -R html-cov > coverage.html&&set NPM_COV="
+ }
+}
